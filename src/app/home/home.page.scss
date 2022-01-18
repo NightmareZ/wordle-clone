@@ -1,0 +1,84 @@
+#container {
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: calc(100% - 20px);
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#container strong {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+#container p {
+  font-size: 16px;
+  line-height: 22px;
+  color: #8c8c8c;
+  margin: 0;
+}
+
+#container a {
+  text-decoration: none;
+}
+
+.wordly-grid {
+
+}
+
+.grid-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.grid-cell {
+  position: relative;
+  width: calc(20% - 20px);
+  border: 1px solid #808080;
+  margin: 5px;
+}
+
+.grid-cell:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+
+.grid-cell-content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 20px;
+}
+
+.keyboard {
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 15px;
+}
+
+.keyboard-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.keyboard-button {
+  background-color: lightgray;
+  margin: 3px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 40px;
+  border-radius: 5px;
+}
+
+.keyboard-button:active {
+  background-color: gray;
+}

@@ -1,0 +1,33 @@
+<ion-content [fullscreen]="true">
+  <div id="container">
+    <div class="wordly-header">
+      <strong>Вордли</strong>
+    </div>
+    <div class="wordly-grid">
+      <div class="grid-row" *ngFor="let row of grid; index as i">
+        <div class="grid-cell" *ngFor="let cell of row; index as j" [ngStyle]="getCellStyle(i, j)">
+          <div class="grid-cell-content">{{ cell }}</div>
+        </div>
+      </div>
+    </div>
+    <div class="keyboard">
+      <div class="keyboard-row">
+        <div class="keyboard-button" *ngFor="let char of keyboard[0].split(''); index as j" [ngStyle]="getKeyboardButtonStyle(0, j)" (click)="keyboardButtonClick(0, j)">{{ char }}</div>
+      </div>
+      <div class="keyboard-row">
+        <div class="keyboard-button" *ngFor="let char of keyboard[1].split(''); index as j" [ngStyle]="getKeyboardButtonStyle(1, j)" (click)="keyboardButtonClick(1, j)">{{ char }}</div>
+      </div>
+      <div class="keyboard-row">
+        <div class="keyboard-button" style="width: 10%; padding: 3px;" (click)="clickBack()">
+          <div style="display: flex; flex-direction: row; justify-content: space-around;">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" class="h-6 w-6 ml-1" style="max-width: 24px;">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2M3 12l6.414 6.414a2 2 0 001.414.586H19a2 2 0 002-2V7a2 2 0 00-2-2h-8.172a2 2 0 00-1.414.586L3 12z">
+              </path>
+            </svg>
+          </div>
+        </div>
+        <div class="keyboard-button" *ngFor="let char of keyboard[2].split(''); index as j" [ngStyle]="getKeyboardButtonStyle(2, j)" (click)="keyboardButtonClick(2, j)">{{ char }}</div>
+      </div>
+    </div>
+  </div>
+</ion-content>

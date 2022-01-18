@@ -1,0 +1,7 @@
+{
+  "name": "MakarovWordle",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
